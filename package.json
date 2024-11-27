@@ -1,0 +1,17 @@
+{
+  "name": "websocket-testing",
+  "version": "1.0.0",
+  "description": "websocket-testing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "http": "^0.0.1-security",
+    "uuid": "^11.0.3",
+    "ws": "^8.18.0"
+  }
+}
