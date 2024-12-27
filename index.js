@@ -13,6 +13,9 @@ const clientMap = new Map(); // To store client information
 app.get("/", (req, res) => {
   res.send("WebSocket server is running!");
 });
+app.get("/status", (req, res) => {
+  res.send("server is running!").status(200);
+});
 
 
 console.log(
