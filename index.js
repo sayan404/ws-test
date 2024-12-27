@@ -17,7 +17,6 @@ app.get("/status", (req, res) => {
   res.send("server is running!").status(200);
 });
 
-
 console.log(
   "WebSocket server running on wss://websocket-testing-lbbz.onrender.com"
 );
@@ -52,8 +51,7 @@ wss.on("connection", (socket) => {
             client.writeKey,
             client.writeKey === writeKey
           );
-          client.writeKey === writeKey;
-          return client;
+          return client.writeKey === writeKey;
         });
         console.log("targetClient : ", targetClient);
 
