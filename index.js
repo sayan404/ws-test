@@ -2,14 +2,17 @@ const express = require("express");
 const http = require("http");
 const { WebSocketServer } = require("ws");
 const { v4: uuidv4 } = require("uuid");
+const cors = require("cors"); 
 
 const app = express();
 const port = 3005;
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
-const clientMap = new Map(); // To store client information
-// Express routes
+// To store client information
+const clientMap = new Map();
+app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("WebSocket server is running!");
 });
